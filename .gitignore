@@ -1,0 +1,23 @@
+# Java and Maven
+target/
+.p2/
+.m2/
+.java/
+*.class
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Passwords and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+
+# Logs and system files
+*.log
+.DS_Store
+Thumbs.db

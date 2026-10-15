@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TxnGuard | Smart Booking System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="logo">TG</div>
+
+                <div>
+                    <h1>TxnGuard</h1>
+                    <p>Reliable Event Booking System</p>
+                </div>
+            </div>
+
+            <button class="refresh-button" onclick="refreshDashboard()">
+                Refresh Dashboard
+            </button>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div>
+                <span class="eyebrow">TRANSACTION MANAGEMENT</span>
+
+                <h2>Manage your events effortlessly.</h2>
+
+                <p>
+                    Explore events, reserve seats, and manage bookings
+                    with reliable database transactions.
+                </p>
+            </div>
+
+            <div class="welcome-badge">
+                <span class="status-dot"></span>
+                System Dashboard
+            </div>
+        </section>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="summary-grid">
+
+            <article class="summary-card">
+                <div class="summary-icon icon-blue">E</div>
+
+                <div>
+                    <p class="summary-label">Total Events</p>
+                    <h3 id="totalEvents">0</h3>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="summary-icon icon-green">A</div>
+
+                <div>
+                    <p class="summary-label">Events with Seats Available</p>
+                    <h3 id="availableEvents">0</h3>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="summary-icon icon-purple">B</div>
+
+                <div>
+                    <p class="summary-label">Total Bookings</p>
+                    <h3 id="totalBookings">0</h3>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="summary-icon icon-orange">C</div>
+
+                <div>
+                    <p class="summary-label">Confirmed Bookings</p>
+                    <h3 id="confirmedBookings">0</h3>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+        <div id="message" class="message" role="status"></div>
+
+
+        <!-- EVENTS SECTION -->
+        <section class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">DISCOVER</span>
+                    <h2>Available Events</h2>
+
+                    <p class="section-description">
+                        Browse events and reserve your seat.
+                    </p>
+                </div>
+            </div>
+
+            <div id="events" class="event-grid">
+                <p>Loading events...</p>
+            </div>
+
+        </section>
+
+
+        <!-- BOOKING HISTORY -->
+        <section class="section">
+
+            <div class="section-heading booking-heading">
+                <div>
+                    <span class="eyebrow">TRANSACTIONS</span>
+                    <h2>Booking History</h2>
+
+                    <p class="section-description">
+                        Review bookings and cancel confirmed reservations.
+                    </p>
+                </div>
+
+                <button class="secondary-button" onclick="loadBookings()">
+                    Refresh Bookings
+                </button>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>User</th>
+                            <th>Event</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingTable">
+                        <tr>
+                            <td colspan="5">Loading bookings...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>TxnGuard · Reliable Transactions · PostgreSQL</p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
